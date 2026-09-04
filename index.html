@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- NOME DO SITE NA ABA DO NAVEGADOR (EDITÁVEL) -->
+    <title>Gitcorp News - Acessibilidade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <!-- LINK PARA SALTAR DIRETAMENTE AO CONTEÚDO (ACESSIBILIDADE POR TECLADO) -->
+    <a href="#conteudo-principal" class="link-atalho">Ir para o conteúdo principal</a>
+
+    <!-- CABEÇALHO PRINCIPAL -->
+    <header class="cabecalho-principal">
+        <div class="container-cabecalho">
+            <div class="bloco-titulo">
+             <!-- LOGOTIPO COM IMAGEM -->
+<img class="logo-placeholder" src="gitcorp news.jpeg" alt="Logotipo do trabalho escolar">
+<div>
+    <!-- EDITAR: NOME E SUBTÍTULO DO TRABALHO -->
+    <h1 id="nome-site">Acessibilidade</h1>
+    <p class="subtitulo">Acessibilidade hoje em dia venha ver</p>
+</div>
+            <a href="#painel-acessibilidade" class="btn-atalho-acessibilidade">Acessibilidade ♿</a>
+        </div>
+    </header>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav class="barra-navegacao" aria-label="Navegação principal">
+        <div class="container-nav">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#topico-1">Tópico 1</a></li>
+                <li><a href="#topico-2">Tópico 2</a></li>
+                <li><a href="#topico-3">Tópico 3</a></li>
+                <li><a href="#galeria-imagens">Imagens</a></li>
+                <li><a href="#secao-videos">Vídeos</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal" class="container-principal">
+
+        <!-- PAINEL DE ACESSIBILIDADE -->
+        <section id="painel-acessibilidade" class="caixa-retro" aria-labelledby="titulo-acessibilidade">
+            <div class="topo-caixa-retro">
+                <h2 id="titulo-acessibilidade">⚙️ Painel de Acessibilidade</h2>
+            </div>
+            <div class="conteudo-caixa-retro painel-grid">
+                
+                <!-- CONTROLE DE FONTE -->
+                <div class="grupo-acessibilidade">
+                    <span class="label-acessibilidade">Tamanho da Fonte:</span>
+                    <button id="btn-aumentar-fonte" title="Aumentar texto">A+</button>
+                    <button id="btn-diminuir-fonte" title="Diminuir texto">A-</button>
+                    <button id="btn-resetar-fonte" title="Restaurar tamanho original">Restaurar</button>
+                </div>
+
+                <!-- ALTO CONTRASTE -->
+                <div class="grupo-acessibilidade">
+                    <span class="label-acessibilidade">Visualização:</span>
+                    <button id="btn-alto-contraste">Ativar Alto Contraste</button>
+                </div>
+
+                <!-- LEITURA POR VOZ -->
+                <div class="grupo-acessibilidade">
+                    <span class="label-acessibilidade">Leitura por Voz:</span>
+                    <button id="btn-voz-ler" title="Iniciar leitura">▶ Ler</button>
+                    <button id="btn-voz-pausar" title="Pausar leitura">⏸ Pausar</button>
+                    <button id="btn-voz-continuar" title="Continuar leitura">▶ Continuar</button>
+                    <button id="btn-voz-parar" title="Parar leitura">⏹ Parar</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO: INÍCIO / BOAS-VINDAS -->
+        <section id="inicio" class="caixa-retro">
+            <div class="topo-caixa-retro">
+                <h2>Apresentação do Projeto</h2>
+            </div>
+            <div class="conteudo-caixa-retro">
+                <div class="caixa-destaque">
+                    <strong>credito:</strong> Pequisado e Editado pelos alunos do 2ºc
+                </div>
+                <!-- EDITAR: TEXTO DE BOAS-VINDAS -->
+                <p>Querido professor, quero agradecer de coração por todo o apoio, paciência e orientação ao longo deste projeto. Sua ajuda foi fundamental para que eu conseguisse superar os desafios e chegar até aqui, e sou muito grato(a) por ter contado com a sua dedicação e incentivo em cada etapa.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: INTRODUÇÃO -->
+        <section id="introducao" class="caixa-retro">
+            <div class="topo-caixa-retro">
+                <h2>Introdução</h2>
+            </div>
+            <div class="conteudo-caixa-retro">
+                <!-- EDITAR: TEXTO DA INTRODUÇÃO -->
+                <p>[Insira aqui o texto introdutório do seu trabalho. Explicar a contextualização do tema, os objetivos principais da pesquisa e a justificativa do estudo.]</p>
+                <p>[Adicione parágrafos adicionais conforme a necessidade da apresentação.]</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: TÓPICO 1 -->
+        <section id="topico-1" class="caixa-retro">
+            <div class="topo-caixa-retro">
+                <h2>Tópico 1: [cão guia]</h2>
+            </div>
+            <div class="conteudo-caixa-retro">
+                <!-- EDITAR: CONTEÚDO DO TÓPICO 1 -->
+                <p>Um cão-guia é um animal de serviço altamente treinado para guiar e garantir a mobilidade de pessoas cegas ou com baixa visão. Considerado uma tecnologia assistiva viva, ele transforma a forma como o usuário interage com o espaço urbano, permitindo deslocamentos rápidos, fluidos e seguros.Abaixo, veja como funciona o trabalho desses animais, o cenário atual dessa modalidade e o impacto direto na acessibilidade visual:   🐕 O papel do cão-guia na locomoção      Diferente da bengala de orientação, que detecta obstáculos por meio do toque físico estrutural, o cão-guia antecipa as situações com o uso da visão e do raciocínio:Desvio dinâmico: Ele desvia de barreiras aéreas (como galhos de árvores e placas de trânsito) e de bloqueios no chão (como buracos ou entulhos), calculando o espaço necessário para que ele e o tutor passem juntos.Sinalização de desníveis: O cão para obrigatoriamente diante de calçadas, degraus, faixas de pedestre e escadas, funcionando como um aviso tátil para o usuário.Busca por alvos: Sob comandos verbais, o animal localiza portas de entrada, balcões de atendimento, assentos vazios em transportes públicos e botões de elevador.Desobediência inteligente: É uma das habilidades mais complexas. O cão é treinado para ignorar um comando de avançar caso perceba um perigo que o tutor não notou, como um carro silencioso avançando a preferencial.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: TÓPICO 2 -->
+        <section id="topico-2" class="caixa-retro">
+            <div class="topo-caixa-retro">
+                <h2>Tópico 2: [Nome do Segundo Tópico]</h2>
+            </div>
+            <div class="conteudo-caixa-retro">
+                <!-- EDITAR: CONTEÚDO DO TÓPICO 2 -->
+                <p>[Desenvolvimento do segundo tópico principal. Pode conter análises, subitens ou explicações complementares.]</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: TÓPICO 3 -->
+        <section id="topico-3" class="caixa-retro">
+            <div class="topo-caixa-retro">
+                <h2>Tópico 3: [Nome do Terceiro Tópico]</h2>
+            </div>
+            <div class="conteudo-caixa-retro">
+                <!-- EDITAR: CONTEÚDO DO TÓPICO 3 -->
+                <p>[Desenvolvimento do terceiro tópico principal do trabalho.]</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: GALERIA DE IMAGENS -->
+        <section id="galeria-imagens" class="caixa-retro">
+            <div class="topo-caixa-retro">
+                <h2>Galeria de Imagens</h2>
+            </div>
+            <div class="conteudo-caixa-retro">
+                <div class="grid-galeria">
+                    
+                    <!-- IMAGEM 1 -->
+                    <figure class="item-imagem">
+                        <!-- EDITAR: SRC DA IMAGEM E TEXTO ALTERNATIVO (ALT) -->
+                        <img src="info.png" alt="Imagem ilustrativa de demonstração do tópico escolar." loading="lazy">
+                        <figcaption>
+                            <strong>Legenda:</strong> Figura 1 - feito por Nicole e Sarah Pierin.
+                        </figcaption>
+                    </figure>
+
+                    <!-- IMAGEM 2 -->
+                    <figure class="item-imagem">
+                        <!-- EDITAR: SRC DA IMAGEM E TEXTO ALTERNATIVO (ALT) -->
+                        <img src="imagem2.jpg" alt="Segunda imagem ilustrativa para o trabalho." loading="lazy">
+                        <figcaption>
+                            <strong>Legenda:</strong> Figura 2 - Descrição da Imagem 2.
+                            <span class="descricao-longa">Descrição detalhada: Detalhes adicionais sobre o conteúdo visual exibido.</span>
+                        </figcaption>
+                    </figure>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: VÍDEOS (APENAS VÍDEOS LOCAIS DA PASTA) -->
+        <section id="secao-videos" class="caixa-retro">
+            <div class="topo-caixa-retro">
+                <h2>Vídeos do Trabalho</h2>
+            </div>
+            <div class="conteudo-caixa-retro">
+                <div class="grid-videos">
+
+                    <!-- VÍDEO LOCAL 1 -->
+                    <article class="item-video">
+                        <h3>Vídeo 1: [Título do Primeiro Vídeo]</h3>
+                        <div class="container-video-local">
+                            <!-- EDITAR: Substitua 'meu-video-1.mp4' pelo nome exato do seu arquivo de vídeo local -->
+                            <video controls preload="metadata">
+                                <source src="202608051416.mp4" type="video/mp4">
+                                <source src="meu-video-1.webm" type="video/webm">
+                                Seu navegador não suporta a exibição de vídeos em HTML5.
+                            </video>
+                        </div>
+                        <p class="descricao-video"><strong>Descrição:</strong> Apresentação gravada pelos alunos sobre o tema do trabalho.</p>
+                        <details class="transcricao-video">
+                            <summary>Transcrição / Legenda em Texto</summary>
+                            <p>[Cole aqui a transcrição do áudio falado no vídeo para acessibilidade.]</p>
+                        </details>
+                    </article>
+
+                    <!-- VÍDEO LOCAL 2 -->
+                    <article class="item-video">
+                        <h3>Vídeo 2: [Título do Segundo Vídeo]</h3>
+                        <div class="container-video-local">
+                            <!-- EDITAR: Substitua 'meu-video-2.mp4' pelo nome do seu segundo arquivo de vídeo -->
+                            <video controls preload="metadata">
+                                <source src="meu-video-2.mp4" type="video/mp4">
+                                Seu navegador não suporta a exibição de vídeos em HTML5.
+                            </video>
+                        </div>
+                        <p class="descricao-video"><strong>Descrição:</strong> Demonstração complementar em vídeo.</p>
+                        <details class="transcricao-video">
+                            <summary>Transcrição / Legenda em Texto</summary>
+                            <p>[Cole aqui a transcrição em texto do segundo vídeo.]</p>
+                        </details>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CONCLUSÃO -->
+        <section id="conclusao" class="caixa-retro">
+            <div class="topo-caixa-retro">
+                <h2>Conclusão</h2>
+            </div>
+            <div class="conteudo-caixa-retro">
+                <!-- EDITAR: TEXTO DA CONCLUSÃO -->
+                <p>[Resumo dos resultados obtidos, considerações finais do grupo e aprendizados principais desenvolvidos ao longo da elaboração deste trabalho.]</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape-principal">
+        <div class="container-rodape">
+            <!-- EDITAR: INFORMAÇÕES INTEGRANTES E ESCOLA -->
+            <p><strong>Gitcorp News</strong> | Desenvolvido por: Pedro 
+            arhur</p>
+                <p>Escola /Emilio de Menezes/ Ano 2ºc - Ano Letivo: 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

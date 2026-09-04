@@ -1,0 +1,402 @@
+/* ==========================================================================
+   1. VARIÁVEIS GLOBAIS (PALETA DE CORES RETRÔ E PARÂMETROS)
+   ========================================================================== */
+:root {
+    /* Cores principais retrô (Inspirado em fóruns e redes dos anos 2000) */
+    --cor-fundo-site: #F5EEDD;
+    --cor-cabecalho-bg: #16587B;
+    --cor-cabecalho-texto: #ffffff;
+    --cor-nav-bg: #2C3E5D;
+    --cor-nav-link: #FFE6D5;
+    --cor-nav-hover: #D2694D;
+    
+    --cor-caixa-bg: #ffffff;
+    --cor-caixa-borda: #84B3CE;
+    --cor-caixa-topo-bg: #16587B;
+    --cor-caixa-topo-texto: #ffffff;
+    
+    --cor-texto-principal: #2C3E50;
+    --cor-link: #00ff2a;
+    --cor-destaque-bg: #B7E0D2;
+    --cor-destaque-borda: #D2694D;
+    
+    --cor-botao-bg: #D6C6E0;
+    --cor-botao-texto: #102a43;
+    --cor-botao-borda: #486581;
+    --cor-foco: #ff6a00;
+
+    /* Tamanho base de fonte */
+    --tamanho-fonte-base: 16px;
+    --fator-fonte: 1;
+
+    /* Fontes com boa legibilidade */
+    --fonte-principal: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Modo de Alto Contraste */
+body.alto-contraste {
+
+    /* FUNDO GERAL */
+    --cor-fundo-site: #F8FAFC;
+
+    /* CABEÇALHO */
+    --cor-cabecalho-bg: #062A45;
+    --cor-cabecalho-texto: #FFFFFF;
+
+    /* MENU */
+    --cor-nav-bg: #FFFFFF;
+    --cor-nav-link: #062A45;
+    --cor-nav-hover: #006B8F;
+
+    /* CAIXAS DE CONTEÚDO */
+    --cor-caixa-bg: #FFFFFF;
+    --cor-caixa-borda: #062A45;
+
+    /* TOPO DAS CAIXAS */
+    --cor-caixa-topo-bg: #0A3D62;
+    --cor-caixa-topo-texto: #FFFFFF;
+
+    /* TEXTO PRINCIPAL */
+    --cor-texto-principal: #111827;
+
+    /* LINKS */
+    --cor-link: #005A8D;
+
+    /* DESTAQUES */
+    --cor-destaque-bg: #E0F2FE;
+    --cor-destaque-borda: #005A8D;
+
+    /* BOTÕES */
+    --cor-botao-bg: #063B5C;
+    --cor-botao-texto: #FFFFFF;
+    --cor-botao-borda: #FFFFFF;
+
+    /* FOCO DE ACESSIBILIDADE */
+    --cor-foco: #FF6B35;
+}
+
+/* ==========================================================================
+   2. RESETS E REGRAS GERAIS
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: calc(var(--tamanho-fonte-base) * var(--fator-fonte));
+}
+
+body {
+    background-color: var(--cor-fundo-site);
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+}
+
+/* Foco acessível por teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+details:focus-visible,
+video:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+}
+
+/* Link de atalho visível apenas via TAB */
+.link-atalho {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 9999;
+}
+.link-atalho:focus {
+    top: 10px;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+.cabecalho-principal {
+    background-color: var(--cor-cabecalho-bg);
+    color: var(--cor-cabecalho-texto);
+    padding: 15px 20px;
+    border-bottom: 3px solid var(--cor-caixa-borda);
+}
+
+.container-cabecalho {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.bloco-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-placeholder {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Mantém a proporção da imagem sem distorcer */
+    border: 1px solid var(--cor-caixa-borda);
+    border-radius: 4px;
+}
+
+.cabecalho-principal h1 {
+    font-size: 1.5rem;
+}
+
+.subtitulo {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.btn-atalho-acessibilidade {
+    background: var(--cor-botao-bg);
+    color: var(--cor-botao-texto);
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--cor-botao-borda);
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+/* MENU DE NAVEGAÇÃO */
+.barra-navegacao {
+    background-color: var(--cor-nav-bg);
+    border-bottom: 2px solid var(--cor-caixa-borda);
+}
+
+.container-nav {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.barra-navegacao ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.barra-navegacao li {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.barra-navegacao a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--cor-nav-link);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.barra-navegacao a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--cor-nav-hover);
+}
+
+/* ==========================================================================
+   4. ESTRUTURA RETRÔ DAS CAIXAS E PAINEL
+   ========================================================================== */
+.container-principal {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo de caixa retrô dos anos 2000 */
+.caixa-retro {
+    background-color: var(--cor-caixa-bg);
+    border: 2px solid var(--cor-caixa-borda);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.topo-caixa-retro {
+    background-color: var(--cor-caixa-topo-bg);
+    color: var(--cor-caixa-topo-texto);
+    padding: 8px 12px;
+    border-bottom: 2px solid var(--cor-caixa-borda);
+}
+
+.topo-caixa-retro h2 {
+    font-size: 1.1rem;
+}
+
+.conteudo-caixa-retro {
+    padding: 15px;
+}
+
+.caixa-destaque {
+    background-color: var(--cor-destaque-bg);
+    border-left: 5px solid var(--cor-destaque-borda);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* PAINEL DE ACESSIBILIDADE */
+.painel-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.grupo-acessibilidade {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.label-acessibilidade {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+button {
+    background-color: var(--cor-botao-bg);
+    color: var(--cor-botao-texto);
+    border: 2px solid var(--cor-botao-borda);
+    padding: 6px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border-radius: 2px;
+}
+
+button:active {
+    transform: translate(1px, 1px);
+}
+
+/* ==========================================================================
+   5. MÍDIAS (GALERIA E VÍDEOS LOCAIS RESPONSIVOS)
+   ========================================================================== */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.item-imagem {
+    border: 1px solid var(--cor-caixa-borda);
+    padding: 8px;
+    background-color: var(--cor-destaque-bg);
+}
+
+.item-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--cor-caixa-borda);
+}
+
+.item-imagem figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+}
+
+.descricao-longa {
+    display: block;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+/* SEÇÃO DE VÍDEOS LOCAIS */
+.grid-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-video {
+    border: 1px solid var(--cor-caixa-borda);
+    padding: 12px;
+    background-color: var(--cor-destaque-bg);
+}
+
+.item-video h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.container-video-local {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.container-video-local video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    background-color: #000000;
+    border: 2px solid var(--cor-caixa-borda);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.descricao-video {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.transcricao-video {
+    background-color: var(--cor-caixa-bg);
+    padding: 8px;
+    border: 1px solid var(--cor-caixa-borda);
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   6. RODAPÉ
+   ========================================================================== */
+.rodape-principal {
+    background-color: var(--cor-cabecalho-bg);
+    color: var(--cor-cabecalho-texto);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 3px solid var(--cor-caixa-borda);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   7. ADAPTAÇÕES PARA CELULAR (RESPONSIVIDADE)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .container-cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .barra-navegacao ul {
+        flex-direction: column;
+    }
+
+    .barra-navegacao li {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .painel-grid {
+        flex-direction: column;
+    }
+}
